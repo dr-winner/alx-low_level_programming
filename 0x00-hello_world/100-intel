@@ -1,2 +1,2 @@
 #!/bin/bashi
-gcc -S -masm=intel $CFILE
+gcc -S -masm=intel "$CFILE" -o "${CFILE%.*}.s"
