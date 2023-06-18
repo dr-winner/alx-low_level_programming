@@ -11,14 +11,14 @@ int main(void)
 
 	for (a = 0; a < 99; a++)
 	{
-		for (x = a + 1; x < 99; x++)
+		for (x = a + 1; x < 100; x++)
 		{
 			putchar('0' + a / 10);
 			putchar('0' + a % 10);
 			putchar(' ');
 			putchar('0' + x / 10);
 			putchar('0' + x % 10);
-			if (a == 98 && x == 98)
+			if (a == 98 && x == 99)
 			{
 				break;
 			}
