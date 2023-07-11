@@ -13,12 +13,12 @@ char *_strdup(char *str)
 {
 	char *n;
 
-	int y, x;
+	int y, x = 0;
 
 	if (str == NULL)
 	return (NULL);
 
-	n = 0;
+	y = 0;
 	while (str[y] != '\0')
 
 		y++;
