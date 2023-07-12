@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "holberton.h"
+#include "main.h"
 
 /**
  * count_word - splits a string into deWord that splits a string into deWord
