@@ -42,10 +42,10 @@ char **strtow(char *str)
 	while (*(str + deLen))
 		deLen++;
 	deWords = count_word(str);
-	if (deWord == 0)
+	if (deWords == 0)
 		return (NULL);
 
-	matr = (char **) malloc(sizeof(char *) * (deWord + 1));
+	matr = (char **) malloc(sizeof(char *) * (deWords + 1));
 	if (matr == NULL)
 		return (NULL);
 
