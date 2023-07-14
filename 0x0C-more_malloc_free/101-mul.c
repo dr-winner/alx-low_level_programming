@@ -24,7 +24,7 @@ int is_digit(char *s)
 }
 
 /**
- * _strlen - returns the length of a string
+ * _strlen - this returns the length of a string
  * @s: string to evaluate
  *
  * Return: the length of the string
@@ -41,7 +41,7 @@ int _strlen(char *s)
 }
 
 /**
- * errors - handles errors for main
+ * errors - this handles errors for main
  */
 void errors(void)
 {
@@ -50,7 +50,7 @@ void errors(void)
 }
 
 /**
- * main - multiplies two positive numbers
+ * main - this multiplies two positive numbers
  * @argc: number of arguments
  * @argv: array of arguments
  *
@@ -59,12 +59,12 @@ void errors(void)
 int main(int argc, char *argv[])
 {
 	char *s1, *s2;
-	int length1, length2, length, x, carry, dig1, dig2, *result, a = 0;
+	int length1, length2, length, x, carry, digit1, digit2, *result, a = 0;
 
 	s1 = argv[1], s2 = argv[2];
 	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
 		errors();
-	length1 = _strlength(s1);
+	length1 = _strlen(s1);
 	length2 = _strlen(s2);
 	length = length1 + length2 + 1;
 	result = malloc(sizeof(int) * length);
@@ -74,12 +74,12 @@ int main(int argc, char *argv[])
 		result[x] = 0;
 	for (length1 = length1 - 1; length1 >= 0; length1--)
 	{
-		dig1 = s1[length1] - '0';
+		digit1 = s1[length1] - '0';
 		carry = 0;
 		for (length2 = _strlen(s2) - 1; length2 >= 0; length2--)
 		{
-			dig2 = s2[length2] - '0';
-			carry += result[length1 + length2 + 1] + (dig1 * dig2);
+			digit2 = s2[length2] - '0';
+			carry += result[length1 + length2 + 1] + (digit1 * digit2);
 			result[length1 + length2 + 1] = carry % 10;
 			carry /= 10;
 		}
